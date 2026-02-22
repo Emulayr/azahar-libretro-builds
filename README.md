@@ -158,6 +158,20 @@ cmake .. -G Ninja \
     -DENABLE_TESTS=OFF
 ```
 
+> [!NOTE]
+> This documentation is specially focused on Android.
+> However, for Linux build x86_64 following can be used:
+> ```bash
+> cmake .. -G Ninja \
+>    -DCMAKE_BUILD_TYPE=Release \
+>    -DENABLE_LIBRETRO=ON \
+>    -DENABLE_QT=OFF \
+>    -DENABLE_SDL2=OFF \
+>    -DENABLE_LTO=OFF \
+>    -DCMAKE_C_FLAGS="-D_GNU_SOURCE" \
+>    -DCMAKE_CXX_FLAGS="-D_GNU_SOURCE"
+>```
+
 ### 6. Compile
 Run Ninja to build the libretro core.
 
